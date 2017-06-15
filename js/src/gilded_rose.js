@@ -6,18 +6,28 @@ class Item {
   }
 }
 
+
 class Shop {
   constructor(items=[]){
     this.items = items;
   }
 
   amendQuality() {
-    return 'hi'
+
   }
 
-  updateQuality(amendQuality) {
+  amendSellIn() {
+    
+  }
 
-    amendQuality();
+  updateQuality() {
+
+    this.amendQuality();
+    this.amendSellIn();
+
+  };
+}
+
     //   for (var i = 0; i < this.items.length; i++) {
     //     // this first 'if' up to line 22 cuts item quality if neither brie, backstage pass, nor sulfuras
     //     if (this.items[i].name != 'Aged Brie' && this.items[i].name != 'Backstage passes to a TAFKAL80ETC concert') {
@@ -73,5 +83,3 @@ class Shop {
     //   }
     //   // item spat out after changes
     //   return this.items;
-  };
-}
