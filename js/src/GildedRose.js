@@ -17,12 +17,15 @@ class Shop {
   };
 
   amendQuality(item) {
-    console.log(item)
-    console.log(item.name)
-    var itemName = item.name
-    switch (itemName) {
-      case 'Aged Brie':
-      this.agedBrieQuality()
+
+    switch (item.name) {
+        case 'Aged Brie':
+            this.agedBrieQuality();
+            break;
+        case 'Sulfuras':
+            this.sulfurasQuality();
+            break;
+    
     }
 
   }
