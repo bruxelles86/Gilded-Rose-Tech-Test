@@ -17,4 +17,13 @@ describe("amendQuality()", function() {
     shop.amendQuality(item)
     expect(shop.sulfurasQuality).toHaveBeenCalled();
   })
+
+  it("Calls backstage passes quality function if passed passes", function() {
+    const shop = new Shop([ new Item("foo", 0, 0) ]);
+    const item = function() { }
+    Object.defineProperty(item, "name", { value: "Backstage passes" });
+    spyOn(shop, 'passesQuality')
+    shop.amendQuality(item)
+    expect(shop.passesQuality).toHaveBeenCalled();
+  })
 });

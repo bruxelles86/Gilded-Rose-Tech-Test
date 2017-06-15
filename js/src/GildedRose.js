@@ -25,7 +25,9 @@ class Shop {
         case 'Sulfuras':
             this.sulfurasQuality();
             break;
-    
+        case 'Backstage passes':
+            this.passesQuality();
+            break;
     }
 
   }
@@ -40,6 +42,10 @@ Shop.prototype.agedBrieQuality = function() {
 };
 
 Shop.prototype.sulfurasQuality = function() {
+
+};
+
+Shop.prototype.passesQuality = function() {
 
 };
 
