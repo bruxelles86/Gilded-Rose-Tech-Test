@@ -1,9 +1,9 @@
-describe("Gilded Rose", function() {
+describe("updateQuality()", function() {
 
-  it("should foo", function() {
-    const gilgedRose = new Shop([ new Item("foo", 0, 0) ]);
-    const items = gilgedRose.updateQuality();
-    expect(items[0].name).toEqual("fixme");
+  it("should call shop's amendQuality function", function() {
+    const shop = new Shop([ new Item("foo", 0, 0) ]);
+    shop.amendQuality = jasmine.createSpy("amendQuality spy")
+    shop.updateQuality(shop.amendQuality);
+    expect(shop.amendQuality).toHaveBeenCalled();
   });
-
 });
