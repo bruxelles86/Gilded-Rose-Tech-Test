@@ -6,25 +6,20 @@ class Item {
   }
 }
 
-
 class Shop {
   constructor(items=[]){
     this.items = items;
   }
 
   amendQuality() {
-
   }
 
   amendSellIn() {
-    
   }
 
   updateQuality() {
-
     this.amendQuality();
     this.amendSellIn();
-
   };
 }
 
