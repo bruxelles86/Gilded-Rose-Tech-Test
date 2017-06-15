@@ -12,6 +12,8 @@ class Shop {
   }
 
   amendQuality() {
+    this.agedBrieQuality()
+    this.sulfurasQuality()
   }
 
   amendSellIn() {
@@ -22,6 +24,14 @@ class Shop {
     this.amendSellIn();
   };
 }
+
+Shop.prototype.agedBrieQuality = function() {
+
+};
+
+Shop.prototype.sulfurasQuality = function() {
+
+};
 
     //   for (var i = 0; i < this.items.length; i++) {
     //     // this first 'if' up to line 22 cuts item quality if neither brie, backstage pass, nor sulfuras
