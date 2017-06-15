@@ -27,12 +27,20 @@ describe("amendQuality()", function() {
     expect(shop.passesQuality).toHaveBeenCalled();
   })
 
-  it("Calls conjured function if passed conjured", function() {
+  it("Calls conjured quality function if passed conjured", function() {
     const shop = new Shop([ new Item("foo", 0, 0) ]);
     const item = function() { }
     Object.defineProperty(item, "name", { value: "Conjured" });
     spyOn(shop, 'conjuredQuality')
     shop.amendQuality(item)
     expect(shop.conjuredQuality).toHaveBeenCalled();
+  })
+
+  it("Calls default quality function if passed none of the above", function() {
+    const shop = new Shop([ new Item("foo", 0, 0) ]);
+    const item = function() { }
+    spyOn(shop, 'defaultQuality')
+    shop.amendQuality(item)
+    expect(shop.defaultQuality).toHaveBeenCalled();
   })
 });

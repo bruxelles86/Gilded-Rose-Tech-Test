@@ -31,9 +31,10 @@ class Shop {
         case 'Conjured':
             this.conjuredQuality();
             break;
-    }
-
-  }
+        default:
+            this.defaultQuality();
+    };
+  };
 
   amendSellIn() {
   }
@@ -53,6 +54,10 @@ Shop.prototype.passesQuality = function() {
 };
 
 Shop.prototype.conjuredQuality = function() {
+
+};
+
+Shop.prototype.defaultQuality = function() {
 
 };
 
