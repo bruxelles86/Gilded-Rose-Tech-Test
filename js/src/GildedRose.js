@@ -28,6 +28,9 @@ class Shop {
         case 'Backstage passes':
             this.passesQuality();
             break;
+        case 'Conjured':
+            this.conjuredQuality();
+            break;
     }
 
   }
@@ -46,6 +49,10 @@ Shop.prototype.sulfurasQuality = function() {
 };
 
 Shop.prototype.passesQuality = function() {
+
+};
+
+Shop.prototype.conjuredQuality = function() {
 
 };
 

@@ -26,4 +26,13 @@ describe("amendQuality()", function() {
     shop.amendQuality(item)
     expect(shop.passesQuality).toHaveBeenCalled();
   })
+
+  it("Calls conjured function if passed conjured", function() {
+    const shop = new Shop([ new Item("foo", 0, 0) ]);
+    const item = function() { }
+    Object.defineProperty(item, "name", { value: "Conjured" });
+    spyOn(shop, 'conjuredQuality')
+    shop.amendQuality(item)
+    expect(shop.conjuredQuality).toHaveBeenCalled();
+  })
 });
