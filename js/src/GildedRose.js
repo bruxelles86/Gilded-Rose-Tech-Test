@@ -24,18 +24,18 @@ class Shop {
 
     switch (item.name) {
         case 'Aged Brie':
-            this.agedBrieQuality();
+            this.agedBrieQuality(item);
             break;
         case 'Sulfuras':
             break;
         case 'Backstage passes to a TAFKAL80ETC concert':
-            this.passesQuality();
+            this.passesQuality(item);
             break;
         case 'Conjured':
-            this.conjuredQuality();
+            this.conjuredQuality(item);
             break;
         default:
-            this.defaultQuality();
+            this.defaultQuality(item);
     };
   };
 
