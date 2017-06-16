@@ -21,7 +21,7 @@ describe("amendSellIn()", function() {
   it("Calls backstage passes SellIn function if passed passes", function() {
     const shop = new Shop([ new Item("foo", 0, 0) ]);
     const item = function() { }
-    Object.defineProperty(item, "name", { value: "Backstage passes" });
+    Object.defineProperty(item, "name", { value: "Backstage passes to a TAFKAL80ETC concert" });
     spyOn(shop, 'passesSellIn')
     shop.amendSellIn(item)
     expect(shop.passesSellIn).toHaveBeenCalled();

@@ -25,7 +25,7 @@ class Shop {
         case 'Sulfuras':
             this.sulfurasQuality();
             break;
-        case 'Backstage passes':
+        case 'Backstage passes to a TAFKAL80ETC concert':
             this.passesQuality();
             break;
         case 'Conjured':
@@ -44,6 +44,10 @@ class Shop {
         case 'Sulfuras':
             this.sulfurasSellIn();
             break;
+        case 'Backstage passes to a TAFKAL80ETC concert':
+            this.passesSellIn();
+            break;
+
     };
   };
 
@@ -66,6 +70,10 @@ Shop.prototype.sulfurasSellIn = function() {
 };
 
 Shop.prototype.passesQuality = function() {
+
+};
+
+Shop.prototype.passesSellIn = function() {
 
 };
 
