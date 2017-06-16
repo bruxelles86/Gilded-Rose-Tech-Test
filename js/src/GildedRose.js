@@ -73,7 +73,9 @@ Shop.prototype.sulfurasSellIn = function() {
 };
 
 Shop.prototype.passesQuality = function() {
-
+  if(item.sellIn < 10 && item.sellIn > 5) {
+    item.quality += 2
+  }
 };
 
 Shop.prototype.passesSellIn = function() {
