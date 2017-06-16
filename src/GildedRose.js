@@ -11,7 +11,7 @@ class Shop {
     this.items = items;
   }
 
-  _updateQuality() {
+  updateQuality() {
     var self = this
 
     this.items.forEach(function(item) {

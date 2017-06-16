@@ -4,7 +4,7 @@ describe("updateQuality()", function() {
     const shop = new Shop([ new Item("foo", 0, 0) ]);
     spyOn(shop, '_amendQuality')
     spyOn(shop, '_amendSellIn')
-    shop._updateQuality();
+    shop.updateQuality();
     expect(shop._amendQuality).toHaveBeenCalled();
   });
 
@@ -12,7 +12,7 @@ describe("updateQuality()", function() {
     const shop = new Shop([ new Item("foo", 0, 0) ]);
     spyOn(shop, '_amendSellIn')
     spyOn(shop, '_amendQuality')
-    shop._updateQuality();
+    shop.updateQuality();
     expect(shop._amendSellIn).toHaveBeenCalled();
   });
 });
