@@ -70,7 +70,9 @@ Shop.prototype.passesQuality = function(item) {
 };
 
 Shop.prototype.conjuredQuality = function(item) {
+  if(item.quality - shop.degradeRate * 2 >= 0) {
   item.quality -= (shop.degradeRate * 2)
+  }
 };
 
 Shop.prototype.defaultQuality = function(item) {
