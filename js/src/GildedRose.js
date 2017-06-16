@@ -54,7 +54,6 @@ class Shop {
             this.defaultSellIn();
     };
   };
-
 }
 
 Shop.prototype.agedBrieQuality = function() {
