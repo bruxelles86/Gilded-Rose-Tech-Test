@@ -47,6 +47,9 @@ class Shop {
         case 'Backstage passes to a TAFKAL80ETC concert':
             this.passesSellIn();
             break;
+        case 'Conjured':
+            this.conjuredSellIn();
+            break;
 
     };
   };
@@ -78,6 +81,10 @@ Shop.prototype.passesSellIn = function() {
 };
 
 Shop.prototype.conjuredQuality = function() {
+
+};
+
+Shop.prototype.conjuredSellIn = function() {
 
 };
 
