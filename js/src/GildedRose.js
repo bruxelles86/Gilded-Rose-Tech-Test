@@ -56,8 +56,10 @@ class Shop {
   };
 }
 
-Shop.prototype.agedBrieQuality = function() {
-
+Shop.prototype.agedBrieQuality = function(item) {
+  if(item.quality < 50) {
+    item.quality += 1
+  };
 };
 
 Shop.prototype.agedBrieSellIn = function() {
