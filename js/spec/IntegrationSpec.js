@@ -48,4 +48,19 @@ describe("Integration tests", function() {
     expect(shop.items[0].sellIn).toEqual(-2)
   });
 
+  it("correctly alters conjured properties", function() {
+    const item = new Item("Conjured", 3, 5)
+    const shop = new Shop([item])
+    shop.updateQuality()
+    expect(shop.items[0].quality).toEqual(3)
+    expect(shop.items[0].sellIn).toEqual(2)
+  })
+
+  it("correctly alters properties for non-special items", function() {
+    const item = new Item("Any random item", 3, 5)
+    const shop = new Shop([item])
+    shop.updateQuality()
+    expect(shop.items[0].quality).toEqual(4)
+    expect(shop.items[0].sellIn).toEqual(2)
+  })
 });
