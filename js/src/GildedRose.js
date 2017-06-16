@@ -41,6 +41,9 @@ class Shop {
         case 'Aged Brie':
             this.agedBrieSellIn();
             break;
+        case 'Sulfuras':
+            this.sulfurasSellIn();
+            break;
     };
   };
 
@@ -55,6 +58,10 @@ Shop.prototype.agedBrieSellIn = function() {
 };
 
 Shop.prototype.sulfurasQuality = function() {
+
+};
+
+Shop.prototype.sulfurasSellIn = function() {
 
 };
 
