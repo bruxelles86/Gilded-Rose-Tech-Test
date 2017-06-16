@@ -57,9 +57,13 @@ Shop.prototype.sellIn = function() {
 
 Shop.prototype.passesQuality = function(item) {
   if(item.sellIn < 10 && item.sellIn > 5) {
-    item.quality += 2
+    if(item.quality + 2 <= 50) {
+      item.quality += 2
+    }
   } else if(item.sellIn <= 5 && item.sellIn >= 0) {
-    item.quality += 3
+    if(item.quality + 3 <= 50) {
+      item.quality += 3
+    }
   } else if(item.sellIn < 0) {
     item.quality = 0
   }
