@@ -51,8 +51,8 @@ Shop.prototype.agedBrieQuality = function(item) {
   };
 };
 
-Shop.prototype.sellIn = function() {
-
+Shop.prototype.sellIn = function(item) {
+  item.sellIn -= 1
 };
 
 Shop.prototype.passesQuality = function(item) {
