@@ -11,13 +11,6 @@ describe("amendQuality()", function() {
     expect(shop.agedBrieQuality).toHaveBeenCalled();
   })
 
-  it("calls sulfuras quality function if passed sulfuras", function() {
-    const shop = new Shop([ new DummyItem("Sulfuras") ]);
-    spyOn(shop, 'sulfurasQuality')
-    shop.amendQuality(shop.items[0])
-    expect(shop.sulfurasQuality).toHaveBeenCalled();
-  })
-
   it("Calls backstage passes quality function if passed passes", function() {
     const shop = new Shop([ new DummyItem("Backstage passes to a TAFKAL80ETC concert") ]);
     spyOn(shop, 'passesQuality')

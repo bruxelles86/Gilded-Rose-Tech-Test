@@ -11,13 +11,6 @@ describe("amendSellIn()", function() {
     expect(shop.agedBrieSellIn).toHaveBeenCalled();
   })
 
-  it("calls sulfuras SellIn function if passed sulfuras", function() {
-    const shop = new Shop([ new DummyItem("Sulfuras") ]);
-    spyOn(shop, 'sulfurasSellIn')
-    shop.amendSellIn(shop.items[0])
-    expect(shop.sulfurasSellIn).toHaveBeenCalled();
-  })
-
   it("Calls backstage passes SellIn function if passed passes", function() {
     const shop = new Shop([ new DummyItem("Backstage passes to a TAFKAL80ETC concert") ]);
     spyOn(shop, 'passesSellIn')

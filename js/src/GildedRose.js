@@ -23,7 +23,6 @@ class Shop {
             this.agedBrieQuality();
             break;
         case 'Sulfuras':
-            this.sulfurasQuality();
             break;
         case 'Backstage passes to a TAFKAL80ETC concert':
             this.passesQuality();
@@ -42,7 +41,6 @@ class Shop {
             this.agedBrieSellIn();
             break;
         case 'Sulfuras':
-            this.sulfurasSellIn();
             break;
         case 'Backstage passes to a TAFKAL80ETC concert':
             this.passesSellIn();
