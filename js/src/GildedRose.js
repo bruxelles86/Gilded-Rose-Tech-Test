@@ -74,7 +74,9 @@ Shop.prototype.conjuredQuality = function(item) {
 };
 
 Shop.prototype.defaultQuality = function(item) {
+  if(item.quality - 1 >= 0) {
   item.quality -= shop.degradeRate
+  }
 };
 
 

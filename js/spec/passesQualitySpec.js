@@ -1,7 +1,7 @@
 describe("passesQuality", function() {
 
   beforeEach(function() {
-    shop = new Shop()
+    const shop = new Shop()
   });
 
   function DummyItem(sellIn, quality) {
