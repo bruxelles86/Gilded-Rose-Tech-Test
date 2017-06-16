@@ -18,6 +18,7 @@ class Shop {
       self._amendQuality(item);
       self._amendSellIn(item);
     });
+    return this.items
   };
 
   _amendQuality(item) {
