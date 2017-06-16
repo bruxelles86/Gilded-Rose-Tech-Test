@@ -15,4 +15,10 @@ describe("passesQuality", function() {
     shop.passesQuality(item);
     expect(item.quality).toEqual(7)
   });
+
+  it("increases quality by 3 when sellIn is between 5 and 0, inclusive", function() {
+    item = new DummyItem('Backstage passes to a TAFKAL80ETC concert', 5, 5)
+    shop.passesQuality(item);
+    expect(item.quality).toEqual(8)
+  })
 });
