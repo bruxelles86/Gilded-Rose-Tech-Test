@@ -70,6 +70,10 @@ Shop.prototype.passesQuality = function(item) {
     }
   } else if(item.sellIn < 0) {
     item.quality = 0
+  } else {
+    if(item.quality - shop.degradeRate >= 0) {
+    item.quality -= shop.degradeRate
+    }
   }
 };
 
