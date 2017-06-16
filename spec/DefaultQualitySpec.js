@@ -11,13 +11,13 @@ describe("conjuredQuality", function() {
 
   it("degrades in quality twice as fast as a 'normal' item", function(){
     const item = new DummyItem("Non-special item", 5)
-    shop.defaultQuality(item);
+    shop._defaultQuality(item);
     expect(item.quality).toEqual(5 - shop.degradeRate);
   });
 
   it("cannot reduce item quality below zero", function() {
     const item = new DummyItem("Non-special item", 0)
-    shop.defaultQuality(item);
+    shop._defaultQuality(item);
     expect(item.quality).toEqual(0);
   })
 });
