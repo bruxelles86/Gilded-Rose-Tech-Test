@@ -36,12 +36,21 @@ class Shop {
     };
   };
 
-  amendSellIn() {
-  }
+  amendSellIn(item) {
+    switch (item.name) {
+        case 'Aged Brie':
+            this.agedBrieSellIn();
+            break;
+    };
+  };
 
 }
 
 Shop.prototype.agedBrieQuality = function() {
+
+};
+
+Shop.prototype.agedBrieSellIn = function() {
 
 };
 
@@ -60,6 +69,8 @@ Shop.prototype.conjuredQuality = function() {
 Shop.prototype.defaultQuality = function() {
 
 };
+
+
 
 //   for (var i = 0; i < this.items.length; i++) {
 //     // this first 'if' up to line 22 cuts item quality if neither brie, backstage pass, nor sulfuras

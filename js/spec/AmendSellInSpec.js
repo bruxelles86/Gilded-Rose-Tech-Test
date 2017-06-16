@@ -5,7 +5,7 @@ describe("amendSellIn()", function() {
     const item = function() { }
     Object.defineProperty(item, "name", { value: "Aged Brie" });
     spyOn(shop, 'agedBrieSellIn')
-    shop.amendQuality(item);
+    shop.amendSellIn(item);
     expect(shop.agedBrieSellIn).toHaveBeenCalled();
   })
 
@@ -14,7 +14,7 @@ describe("amendSellIn()", function() {
     const item = function() { }
     Object.defineProperty(item, "name", { value: "Sulfuras" });
     spyOn(shop, 'sulfurasSellIn')
-    shop.amendQuality(item)
+    shop.amendSellIn(item)
     expect(shop.sulfurasSellIn).toHaveBeenCalled();
   })
 
@@ -23,7 +23,7 @@ describe("amendSellIn()", function() {
     const item = function() { }
     Object.defineProperty(item, "name", { value: "Backstage passes" });
     spyOn(shop, 'passesSellIn')
-    shop.amendQuality(item)
+    shop.amendSellIn(item)
     expect(shop.passesSellIn).toHaveBeenCalled();
   })
 
@@ -32,7 +32,7 @@ describe("amendSellIn()", function() {
     const item = function() { }
     Object.defineProperty(item, "name", { value: "Conjured" });
     spyOn(shop, 'conjuredSellIn')
-    shop.amendQuality(item)
+    shop.amendSellIn(item)
     expect(shop.conjuredSellIn).toHaveBeenCalled();
   })
 
@@ -40,7 +40,7 @@ describe("amendSellIn()", function() {
     const shop = new Shop([ new Item("foo", 0, 0) ]);
     const item = function() { }
     spyOn(shop, 'defaultSellIn')
-    shop.amendQuality(item)
+    shop.amendSellIn(item)
     expect(shop.defaultSellIn).toHaveBeenCalled();
   })
 });
