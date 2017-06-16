@@ -12,8 +12,12 @@ class Shop {
   }
 
   updateQuality() {
-    this.amendQuality();
-    this.amendSellIn();
+    var self = this
+
+    this.items.forEach(function(item) {
+      self.amendQuality(item);
+      self.amendSellIn(item);
+    });
   };
 
   amendQuality(item) {
