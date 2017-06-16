@@ -7,8 +7,8 @@ describe("conjuredQuality", function() {
 
   it("degrades in quality twice as fast as a 'normal' item", function(){
     const shop = new Shop()
-    const item = new DummyItem("Conjured", 5)
-    shop.conjuredQuality(item);
-    expect(item.quality).toEqual(5 - (shop.degradeRate * 2));
+    const item = new DummyItem("Non-special item", 5)
+    shop.defaultQuality(item);
+    expect(item.quality).toEqual(5 - shop.degradeRate);
   });
 });

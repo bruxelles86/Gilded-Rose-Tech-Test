@@ -38,18 +38,18 @@ class Shop {
   amendSellIn(item) {
     switch (item.name) {
         case 'Aged Brie':
-            this.agedBrieSellIn();
+            this.sellIn();
             break;
         case 'Sulfuras':
             break;
         case 'Backstage passes to a TAFKAL80ETC concert':
-            this.passesSellIn();
+            this.sellIn();
             break;
         case 'Conjured':
-            this.conjuredSellIn();
+            this.sellIn();
             break;
         default:
-            this.defaultSellIn();
+            this.sellIn();
     };
   };
 }
@@ -63,15 +63,7 @@ Shop.prototype.agedBrieQuality = function(item) {
   };
 };
 
-Shop.prototype.agedBrieSellIn = function() {
-
-};
-
-Shop.prototype.sulfurasQuality = function() {
-
-};
-
-Shop.prototype.sulfurasSellIn = function() {
+Shop.prototype.sellIn = function() {
 
 };
 
@@ -85,24 +77,12 @@ Shop.prototype.passesQuality = function(item) {
   }
 };
 
-Shop.prototype.passesSellIn = function() {
-
-};
-
 Shop.prototype.conjuredQuality = function(item) {
   item.quality -= (shop.degradeRate * 2)
 };
 
-Shop.prototype.conjuredSellIn = function() {
-
-};
-
-Shop.prototype.defaultQuality = function() {
-
-};
-
-Shop.prototype.defaultSellIn = function() {
-
+Shop.prototype.defaultQuality = function(item) {
+  item.quality -= shop.degradeRate
 };
 
 

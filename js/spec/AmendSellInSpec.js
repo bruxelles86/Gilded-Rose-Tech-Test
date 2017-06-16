@@ -4,31 +4,31 @@ describe("amendSellIn()", function() {
     this.name = name;
   }
 
-  it("calls aged brie SellIn function if passed aged brie", function() {
+  it("calls aged sellIn function if passed aged brie", function() {
     const shop = new Shop([ new DummyItem("Aged Brie") ]);
-    spyOn(shop, 'agedBrieSellIn')
+    spyOn(shop, 'sellIn')
     shop.amendSellIn(shop.items[0]);
-    expect(shop.agedBrieSellIn).toHaveBeenCalled();
+    expect(shop.sellIn).toHaveBeenCalled();
   })
 
-  it("Calls backstage passes SellIn function if passed passes", function() {
+  it("Calls passes sellIn function if passed passes", function() {
     const shop = new Shop([ new DummyItem("Backstage passes to a TAFKAL80ETC concert") ]);
-    spyOn(shop, 'passesSellIn')
+    spyOn(shop, 'sellIn')
     shop.amendSellIn(shop.items[0])
-    expect(shop.passesSellIn).toHaveBeenCalled();
+    expect(shop.sellIn).toHaveBeenCalled();
   })
 
-  it("Calls conjured SellIn function if passed conjured", function() {
+  it("Calls sellIn function if passed conjured", function() {
     const shop = new Shop([ new DummyItem("Conjured") ]);
-    spyOn(shop, 'conjuredSellIn')
+    spyOn(shop, 'sellIn')
     shop.amendSellIn(shop.items[0])
-    expect(shop.conjuredSellIn).toHaveBeenCalled();
+    expect(shop.sellIn).toHaveBeenCalled();
   })
 
-  it("Calls default SellIn function if passed none of the above", function() {
+  it("Calls sellIn function if passed none of the above", function() {
     const shop = new Shop([ new DummyItem("Non-special Item") ]);
-    spyOn(shop, 'defaultSellIn')
+    spyOn(shop, 'sellIn')
     shop.amendSellIn(shop.items[0])
-    expect(shop.defaultSellIn).toHaveBeenCalled();
+    expect(shop.sellIn).toHaveBeenCalled();
   })
 });
