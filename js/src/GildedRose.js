@@ -36,21 +36,9 @@ class Shop {
   };
 
   amendSellIn(item) {
-    switch (item.name) {
-        case 'Aged Brie':
-            this.sellIn();
-            break;
-        case 'Sulfuras':
-            break;
-        case 'Backstage passes to a TAFKAL80ETC concert':
-            this.sellIn();
-            break;
-        case 'Conjured':
-            this.sellIn();
-            break;
-        default:
-            this.sellIn();
-    };
+    if(item.name != 'Sulfuras') {
+      this.sellIn(item);
+    }
   };
 }
 
