@@ -54,6 +54,9 @@ class Shop {
   };
 }
 
+// sets the 'normal' rate for non-special items to degrade by
+Shop.prototype.degradeRate = 1
+
 Shop.prototype.agedBrieQuality = function(item) {
   if(item.quality < 50) {
     item.quality += 1
@@ -72,7 +75,7 @@ Shop.prototype.sulfurasSellIn = function() {
 
 };
 
-Shop.prototype.passesQuality = function() {
+Shop.prototype.passesQuality = function(item) {
   if(item.sellIn < 10 && item.sellIn > 5) {
     item.quality += 2
   } else if(item.sellIn <= 5 && item.sellIn >= 0) {
@@ -86,8 +89,8 @@ Shop.prototype.passesSellIn = function() {
 
 };
 
-Shop.prototype.conjuredQuality = function() {
-
+Shop.prototype.conjuredQuality = function(item) {
+  item.quality -= (shop.degradeRate * 2)
 };
 
 Shop.prototype.conjuredSellIn = function() {
