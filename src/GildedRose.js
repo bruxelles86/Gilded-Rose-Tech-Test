@@ -11,37 +11,37 @@ class Shop {
     this.items = items;
   }
 
-  updateQuality() {
+  _updateQuality() {
     var self = this
 
     this.items.forEach(function(item) {
-      self.amendQuality(item);
-      self.amendSellIn(item);
+      self._amendQuality(item);
+      self._amendSellIn(item);
     });
   };
 
-  amendQuality(item) {
+  _amendQuality(item) {
 
     switch (item.name) {
         case 'Aged Brie':
-            this.agedBrieQuality(item);
+            this._agedBrieQuality(item);
             break;
         case 'Sulfuras':
             break;
         case 'Backstage passes to a TAFKAL80ETC concert':
-            this.passesQuality(item);
+            this._passesQuality(item);
             break;
         case 'Conjured':
-            this.conjuredQuality(item);
+            this._conjuredQuality(item);
             break;
         default:
-            this.defaultQuality(item);
+            this._defaultQuality(item);
     };
   };
 
-  amendSellIn(item) {
+  _amendSellIn(item) {
     if(item.name != 'Sulfuras') {
-      this.sellIn(item);
+      this._sellIn(item);
     }
   };
 }
@@ -49,17 +49,17 @@ class Shop {
 // sets the 'normal' rate for non-special items to degrade by
 Shop.prototype.degradeRate = 1
 
-Shop.prototype.agedBrieQuality = function(item) {
+Shop.prototype._agedBrieQuality = function(item) {
   if(item.quality < 50) {
     item.quality += 1
   };
 };
 
-Shop.prototype.sellIn = function(item) {
+Shop.prototype._sellIn = function(item) {
   item.sellIn -= 1
 };
 
-Shop.prototype.passesQuality = function(item) {
+Shop.prototype._passesQuality = function(item) {
   if(item.sellIn < 10 && item.sellIn > 5) {
     if(item.quality + 2 <= 50) {
       item.quality += 2
@@ -77,13 +77,13 @@ Shop.prototype.passesQuality = function(item) {
   }
 };
 
-Shop.prototype.conjuredQuality = function(item) {
+Shop.prototype._conjuredQuality = function(item) {
   if(item.quality - shop.degradeRate * 2 >= 0) {
   item.quality -= (shop.degradeRate * 2)
   }
 };
 
-Shop.prototype.defaultQuality = function(item) {
+Shop.prototype._defaultQuality = function(item) {
   if(item.quality - 1 >= 0) {
   item.quality -= shop.degradeRate
   }

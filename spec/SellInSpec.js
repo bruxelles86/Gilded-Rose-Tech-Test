@@ -5,7 +5,7 @@ describe("sellIn", function(){
 
   it("reduces item sellIn value by one", function(){
     const item = new DummyItem(1)
-    shop.sellIn(item)
+    shop._sellIn(item)
     expect(item.sellIn).toEqual(0)
   });
 });
